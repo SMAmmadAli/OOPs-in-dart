@@ -1,6 +1,15 @@
+import 'abstraction.dart';
 import 'encapsulation.dart';
 
 void main(List<String> args) {
+  //Abstraction
+
+  makeAccount mkAccount = makeAccount.open();
+
+  // Object of Simple Example Abstraction
+  // B b = B();
+  // b.display();
+
   //Encapsulation Object
   BankAccount pkAccount = BankAccount();
   print(pkAccount.getBalance());
