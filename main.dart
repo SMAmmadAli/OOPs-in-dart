@@ -1,4 +1,13 @@
+import 'encapsulation.dart';
+
 void main(List<String> args) {
+  //Encapsulation Object
+  BankAccount pkAccount = BankAccount();
+  print(pkAccount.getBalance());
+  pkAccount.deposite(1000);
+  print(pkAccount.getBalance());
+  pkAccount.withDraw(5000);
+  print(pkAccount.getBalance());
 
   // Object or Instance
   Human human1 = Human("S M Ammad Ali", 20);
@@ -19,57 +28,52 @@ void main(List<String> args) {
   SmartPhone smartPhone2 = SmartPhone.tablet();
   smartPhone2.companyName = 'Orange';
   smartPhone2.named();
-
 }
 //Class are defined as blueprint of the object. A Class is user defined data type.
 
-class Human{
-
+class Human {
   //properties:- variable in class are called properties.
-  
+
   String name = '';
   int age = 0;
   String gender = 'male';
 
-  // method:- function in class are called method. 
-  
-  alive(){
+  // method:- function in class are called method.
+
+  alive() {
     print("$name is alive");
   }
-  
-  year(){
+
+  year() {
     print("$name age is $age");
   }
 
   //Contructor:- A constructor is a special function of the class that is responsible for initializing the variables of the class.
-  
-  // There are three types of constructors:
-  //    Default constructor. 
-  //    Parameterized constructor. 
-  //    Named constructor.
 
+  // There are three types of constructors:
+  //    Default constructor.
+  //    Parameterized constructor.
+  //    Named constructor.
 
   // Human(name){
   //   this.name=name;
   // }
-  
+
   // Or Contructor are also used as. It is updated Contructor.
-  
+
   Human(this.name, this.age);
-  
 }
 
-class SmartPhone{
+class SmartPhone {
   //properties
   String companyName = '';
 
   // NamedContructor
-  SmartPhone({this.companyName=""});
-  SmartPhone.tablet({this.companyName=''});
-  SmartPhone.phone({this.companyName=''});
+  SmartPhone({this.companyName = ""});
+  SmartPhone.tablet({this.companyName = ''});
+  SmartPhone.phone({this.companyName = ''});
 
-  named(){
+  named() {
     print('$companyName is Company name');
   }
 }
-
